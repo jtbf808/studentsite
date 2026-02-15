@@ -1,0 +1,103 @@
+
+/* #BASE CSS (Initital Setup)
+---------------------------------
+    #GLOBAL SETTINGS
+        # GLOBAL VARIABLES
+        # GLOBAL RESETS
+        # GLOBAL COLORS
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HEADINGS
+            #PARAGRAPHS
+            #LINKS
+        #HELPERS
+        #MEDIA
+            #IMAGES
+            #VIDEO
+        #COMPONENTS
+            #BUTTONS
+    #BASE LAYOUT
+        #CONTAINER
+        #MEDIA QUERIES
+        #GRID SYSTEM
+    #BASE SITE
+        #SITE STRUCTURE
+            #HEADER
+                # site-id (LOGO)
+            #SITE NAVIGATION
+                # toggle-nav (Default for Small Screens)
+            #FOOTER
+            #SECTIONS
+            #SUB PAGES
+                #...
+--------------------------------- */ 
+
+
+/* ---------------------------------
+----------#GLOBAL SETTINGS----------
+--------------------------------- */
+
+
+/* GLOBAL VARIABLES */
+:root { 
+
+--color-body-bg: white;
+--color-text: black;
+--color-text-headings: black;
+
+--color-links: rgb(0 51 153);
+--color-links-hover:rgb(0 0 51);
+
+}
+
+
+/* GLOBAL RESETS */  
+
+/* SET ALL ELEMENTS TO USE BORDER-BOX SIZING */
+* { box-sizing: border-box; }
+
+/* ENABLE SMOOTH SCROLLING */
+html { scroll-behavior: smooth; }
+
+/* REMOVE DEFAUT BODY MARGIN */
+body { margin: 0; }
+
+
+/* GLOBAL COLORS */
+
+body {
+
+    /* SET BODY BACKGROUND COLOR */
+    background-color: var(--color-body-bg);
+
+    /* SET BODY TEXT COLOR */
+    color: var(--color-text-body);
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+    /* SET HEADING TEXT COLOR */
+    color: var(--color-text-headings);
+
+}
+
+/* SET LINK COLORS */
+a {
+    color: var(--color-links);
+    
+    &:hover {
+        color: var(--color-links-hover);
+    }   
+}
+
+
+
+
+
+
+/* ---------------------------------
+----------#GLOBAL CONTENT----------
+--------------------------------- */
+
