@@ -1,0 +1,246 @@
+
+/* #BASE CSS (Initital Setup)
+---------------------------------
+    #GLOBAL SETTINGS
+        # GLOBAL VARIABLES
+        # GLOBAL RESETS
+        # GLOBAL COLORS
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HEADINGS
+            #PARAGRAPHS
+            #LINKS
+        #HELPERS
+        #MEDIA
+            #IMAGES
+            #VIDEO
+        #COMPONENTS
+            #BUTTONS
+    #BASE LAYOUT
+        #CONTAINER
+        #MEDIA QUERIES
+        #GRID SYSTEM
+    #BASE SITE
+        #SITE STRUCTURE
+            #HEADER
+                # site-id (LOGO)
+            #SITE NAVIGATION
+                # toggle-nav (Default for Small Screens)
+            #FOOTER
+            #SECTIONS
+            #SUB PAGES
+                #...
+--------------------------------- */ 
+
+
+/* ---------------------------------
+----------#GLOBAL SETTINGS----------
+--------------------------------- */
+
+
+/* GLOBAL VARIABLES */
+:root { 
+
+--color-body-bg: white;
+--color-text: black;
+--color-text-headings: black;
+
+--color-links: rgb(0 51 153);
+--color-links-hover:rgb(0 0 51);
+
+}
+
+
+/* GLOBAL RESETS */  
+
+/* SET ALL ELEMENTS TO USE BORDER-BOX SIZING */
+* { box-sizing: border-box; }
+
+/* ENABLE SMOOTH SCROLLING */
+html { scroll-behavior: smooth; }
+
+/* REMOVE/ADJUST DEFAUT BODY MARGIN */
+body { margin: 0; }
+
+
+/* GLOBAL COLORS */
+
+body {
+
+    /* SET BODY BACKGROUND COLOR */
+    background-color: var(--color-body-bg);
+
+    /* SET BODY TEXT COLOR */
+    color: var(--color-text-body);
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+    /* SET HEADING TEXT COLOR */
+    color: var(--color-text-headings);
+
+}
+
+/* SET LINK COLORS */
+a {
+    color: var(--color-links);
+    
+    &:hover {
+        color: var(--color-links-hover);
+    }   
+}
+
+
+
+
+
+
+/* ---------------------------------
+----------#GLOBAL CONTENT----------
+--------------------------------- */
+
+/* BASE TYPOGRAPHY */
+
+body {
+    
+  /* SET GLOBAL BODY FONT */
+  font-family: var(--font-body);
+
+  /* SET DEFAULTN FONT SIZE */
+  /*100% = 16px = 1em and 1rem */
+  font-size: 112%;
+
+/* SET DEFAULT LEADING LINE HEIGHT */
+  line-height: 1.2;
+
+
+}
+
+
+/* SET GLOBAL HEADINGS FONT */
+h1, h2, h3, h4, h5, h6 {
+    /* SET ALL HEADINGS TEXT */
+    font-family: var(--font-headings);
+
+    /* SET ALL HEADING MARGINS */
+     margin: 1em 0.5em 0;
+
+     /* BALACNE THE NUMBER OF WORDS PER LINE FOR ALL HEADINGS */
+     text-wrap: balance;
+
+
+}
+
+
+
+/* USE A TYPOGRAPHIC SCALE FOR HEADING SIZES */
+h1 { 
+    font-size: 3.052em;
+    line-height: 1;
+}
+
+h2 { 
+    font-size: 2.441em;
+    line-height: 1.2;
+}
+
+h3 { 
+    font-size: 1.953em;
+    line-height: 1.3;
+}
+
+h4 { 
+    font-size: 1.563em;
+    line-height: 1.4;
+}
+
+h5 { 
+    font-size: 1.25em;
+    line-height: 1.5;
+}
+
+h6 { 
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+
+/* PARAGPAH SETTINGS */
+p {
+
+    /* SET PARAGRAPH MARGINS */
+    margin: 1.5em 0;
+
+    /* LIMIT NUMBER OF CHARATERS PER LINE */
+        max-width: 67ch;
+
+    /* Fix Widows and Orphans */
+    text-wrap: pretty;
+
+
+}
+
+
+/* LINKS SETTINGS */
+a { 
+
+    /* REMOVE UNDERLINE */
+    text-decoration: none;
+}
+
+/* HELPER CLASS FOR CENTERING TEXT */
+
+.text-center {
+    text-align: center;
+}
+
+p.text-centerd,
+.text-center {
+    margin-inline:auto;
+}
+
+/* RESPONSIVE IMAGES/MEDIA LATER VIDEO */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/*  #COMPONENTS  */
+
+/* #BUTTONS */
+button,
+a.button {
+  display: inline-block;
+  background-color: var(--color-links);
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 1.5em;
+    margin-block-end: .25em;
+    letter-spacing: 1px;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+    line-height: 1;
+    border: 1px solid var(--color-links);
+    border-radius: 10px;
+
+    &:hover {
+       background-color: var(--color-links-hover);
+       border-color: white;
+}
+
+&.alt {
+    background-color: transparent;
+    color: var(--color-links);
+
+    &:hover {
+        background-color: var(--color-links-hover);
+        border-color: white;
+    }
+}
+
+ 
+}
