@@ -1,0 +1,166 @@
+
+/* #BASE CSS (Initital Setup)
+---------------------------------
+    #GLOBAL SETTINGS
+        # GLOBAL VARIABLES
+        # GLOBAL RESETS
+        # GLOBAL COLORS
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HEADINGS
+            #PARAGRAPHS
+            #LINKS
+        #HELPERS
+        #MEDIA
+            #IMAGES
+            #VIDEO
+        #COMPONENTS
+            #BUTTONS
+    #BASE LAYOUT
+        #CONTAINER
+        #MEDIA QUERIES
+        #GRID SYSTEM
+    #BASE SITE
+        #SITE STRUCTURE
+            #HEADER
+                # site-id (LOGO)
+            #SITE NAVIGATION
+                # toggle-nav (Default for Small Screens)
+            #FOOTER
+            #SECTIONS
+            #SUB PAGES
+                #...
+--------------------------------- */ 
+
+
+/* ---------------------------------
+----------#GLOBAL SETTINGS----------
+--------------------------------- */
+
+
+/* GLOBAL VARIABLES */
+:root { 
+
+--color-body-bg: white;
+--color-text: black;
+--color-text-headings: black;
+
+--color-links: rgb(0 51 153);
+--color-links-hover:rgb(0 0 51);
+
+}
+
+
+/* GLOBAL RESETS */  
+
+/* SET ALL ELEMENTS TO USE BORDER-BOX SIZING */
+* { box-sizing: border-box; }
+
+/* ENABLE SMOOTH SCROLLING */
+html { scroll-behavior: smooth; }
+
+/* REMOVE DEFAUT BODY MARGIN */
+body { margin: 0; }
+
+
+/* GLOBAL COLORS */
+
+body {
+
+    /* SET BODY BACKGROUND COLOR */
+    background-color: var(--color-body-bg);
+
+    /* SET BODY TEXT COLOR */
+    color: var(--color-text-body);
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+    /* SET HEADING TEXT COLOR */
+    color: var(--color-text-headings);
+
+}
+
+/* SET LINK COLORS */
+a {
+    color: var(--color-links);
+    
+    &:hover {
+        color: var(--color-links-hover);
+    }   
+}
+
+/* ----------------------------- */
+/* -------- BASE LAYOUT -------- */
+/* ----------------------------- */
+
+    .container {
+        max-width: 1000px;
+        margin-inline: auto;
+        padding-inline: 1em;
+    }
+
+    /* MEDIA QUERIES */
+
+        /* --- <768 / SMALL / 14pt FONT ----------- */
+        /* --- 768-1024 / TABLETS / 14pt FONT ----- */
+        /* --- 1024-1200 / NOTEBOOKS / 16pt FONT -- */
+        /* --- >1200 / LARGE SCREENS / 18pt FONT -- */
+
+        body{
+            font-size: 87.5%;
+        }
+
+        @media (width > 768px) {
+            body{
+            font-size: 87.5%;
+            }
+        }
+
+        @media (width > 1024px) {
+            body{
+            font-size: 100%;
+            }
+        }
+
+        @media (width > 1200px) {
+            body{
+            font-size: 112.5%;
+            }
+        }
+
+    /* GRID SYSTEM */
+
+    .row {
+        --gridgap: 50px;
+    }
+
+    .row > * {
+        margin-block-end: var(--gridgap);
+    }
+
+    @media (width > 768px) {
+        .row {
+        display: flex;
+        gap: var(--gridgap);
+        }
+
+        .row .one-whole {min-width: 100%;}
+        .row .one-half {min-width: calc(50% - var(--gridgap) * .5);}
+        .row .one-third {min-width: calc(33.3333% - var(--gridgap) * .6666);}
+        .row .one-fourth {min-width: calc(25% - var(--gridgap) * .75);}
+    }
+
+    .grid-demo .column {
+        background-color: #b389d4;
+        padding: 1em;
+    }
+
+    /*  VIEW BLOCK LEVEL ELEMENT OUTLINES */
+    /* body * {
+        background-color: rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        color: rgba(0, 0, 0, 0.2)
+    } */
