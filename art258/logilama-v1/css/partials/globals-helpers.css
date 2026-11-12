@@ -1,0 +1,18 @@
+/* GLOBAL HELPERS */
+
+@media (width<=768px) {
+
+    .hide-on-mobile {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+
+    }
+
+}
+
+.visually-hidden {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}

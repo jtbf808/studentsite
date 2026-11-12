@@ -1,0 +1,32 @@
+body {
+    overflow-x: clip;
+}
+
+/* HERO CIRCLE */
+
+.hero-circle {
+    position: absolute;
+    width: 160vw;
+    height: 160vw;
+    left: -30vw;
+    top: -115vw;
+    border-radius: 50%;
+    background-color: #E0C1E4;
+    z-index: -10000;
+}
+
+/* BODY CIRCLE */
+
+/* FOOTER CIRCLE */
+
+.footer-circle {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 2400px;
+    height: 2400px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: #E0C1E4;
+    z-index: 0;
+}
